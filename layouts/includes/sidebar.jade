@@ -1,23 +1,11 @@
 aside.sidebar
   .sidebar__content
-    nav.sidebar__list
-      h2: a(href="/guides/start/#") Getting Started
-      ul
-          each guide in getCollection("startGuides").toJSON()
-              li: a(href="/guides/start/#"+guide.basename)!=guide.title
-    nav.sidebar__list
-        h2: a(href="/guides/cli/#") PhoneGap CLI
-        ul
-            each guide in getCollection("cliGuides").toJSON()
-                li: a(href="/guides/cli/#"+guide.basename)!=guide.title
-    nav.sidebar__list
-        h2: a(href="/guides/desktop/#") PhoneGap Desktop
-        ul
-            each guide in getCollection("desktopGuides").toJSON()
-                li: a(href="/guides/desktop/#"+guide.basename)!=guide.title
+    h2 Guides
+    - var navItems = [{heading:"Getting Started",url:"/guides/start/index.html",sections: getCollection("startGuides").toJSON()},{heading:"PhoneGap CLI",url:"/guides/cli/index.html",sections: getCollection("cliGuides").toJSON()},{heading:"PhoneGap Desktop",url:"/guides/desktop/index.html",sections: getCollection("desktopGuides").toJSON()},{heading:"Configure",url:"/guides/configure/index.html", sections: getCollection("configGuides").toJSON()} ];
+    each navItem in navItems
       nav.sidebar__list
-          h2: a(href="/guides/configure/#") Configure
+        h3: a(href=navItem.url+"#")= navItem.heading
+        if (document.url == navItem.url)
           ul
-              each guide in getCollection("configGuides").toJSON()
-                  li: a(href="/guides/configure/#"+guide.basename)!=guide.title
-
+              each guide in navItem.sections
+                  li: a(href="/guides/start/index.html#"+guide.basename)!=guide.title

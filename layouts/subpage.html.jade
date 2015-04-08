@@ -22,3 +22,7 @@ block append content
       a.page__navigation--next(href=next.url)!= "Next Step: "+next.title
     -else
       .prev &nbsp;
+
+block append scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/sizzle/2.1.1/sizzle.min.js")
+  script(src="/scripts/index.js")  

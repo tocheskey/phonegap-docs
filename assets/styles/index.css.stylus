@@ -223,6 +223,10 @@ article.page
     padding 0 0 0 1rem
     a
       color #003252
+      &:hover
+        text-decoration none
+      &.current
+        text-decoration underline
 .video-wrapper
   position relative
   padding-bottom 56.25%
