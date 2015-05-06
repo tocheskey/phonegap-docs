@@ -69,25 +69,33 @@ module.exports = {
     }
   },
   templateData: {
-    parseNavItems: function() {
+    parseNavItems: function(currentPage) {
       var collection = this.getCollection("navItems").toJSON();
       var output = {};
 
-      var getObjectAsString = function(array,post) {
+      var getObjectAsString = function(array, posts, postIndex, depth) {
+        depth = (typeof depth == 'number') ? depth+1 : 1;
         if(!array.length){
           var endNode = {
-            title: post.title,
-            url: post.url
+            title: posts[postIndex].title,
+            url: posts[postIndex].url
+          };
+          return JSON.stringify(endNode);
+        } else if(array.length == 1 && array[0] == '0-index.html.md') {
+          var endNode = {
+            title: posts[postIndex].title,
+            url: posts[postIndex + 1].url,
+            tag: "h"+depth
           };
           return JSON.stringify(endNode);
         } else {
-          return '{"' + array[0] + '":' + getObjectAsString (array.slice(1),post) + '}';
+          return '{"' + array[0] + '":' + getObjectAsString (array.slice(1), posts, postIndex, depth) + '}';
         }
       }
 
       for (var i = 0; i < collection.length; i++){
         var pathAr = collection[i].relativePath.split('/');
-        var pathObj = JSON.parse(getObjectAsString(pathAr, collection[i]));
+        var pathObj = JSON.parse(getObjectAsString(pathAr, collection, i));
         _.merge(output,pathObj);
         for (var j = 0; j < pathAr.length; j++){
 

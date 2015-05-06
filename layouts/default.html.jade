@@ -12,6 +12,7 @@ html(lang='en')
       != styles.toHTML()
       link(href='/styles/normalize.css', rel='stylesheet')
       link(href='/styles/index.css', rel='stylesheet')
+      link(href='/styles/github-highlight.css', rel='stylesheet')
 
 
   body
@@ -20,8 +21,10 @@ html(lang='en')
     main
       .bounds
         block main
+          include ./includes/sidebar.jade
           .content
             block content
+              h1!= document.title
               != content
     block site-footer
       include ./includes/site-footer.jade
