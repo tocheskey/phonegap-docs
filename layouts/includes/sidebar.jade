@@ -1,14 +1,15 @@
 aside.sidebar
   .sidebar__content
     nav.sidebar__list
-      each guide, index in getCollection("navItems").toJSON()
-        if guide.filename == '0-index.html.md'
-          if index > 0
-            | </ul>
-          | <h#{guide.relativePath.split('/').length}> 
-          a(href="/#{guide.url}")=guide.title
-          | </h#{guide.relativePath.split('/').length}>
-          | <ul>
-        else
-          li: a(href="/#{guide.url}")=guide.title
-      | </ul>
+      pre=JSON.stringify(parseNavItems())
+      //- each guide, index in parseNavItems()
+      //-   if guide.filename == '0-index.html.md'
+      //-     if index > 0
+      //-       | </ul>
+      //-     | <h#{guide.relativePath.split('/').length}> 
+      //-     a(href="/#{guide.url}")=guide.title
+      //-     | </h#{guide.relativePath.split('/').length}>
+      //-     | <ul>
+      //-   else
+      //-     li: a(href="/#{guide.url}")=guide.title +" "+document.url
+      //- | </ul>

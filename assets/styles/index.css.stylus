@@ -211,19 +211,32 @@ article.page
   margin-right 50px
   position relative
 .sidebar__content
-  position fixed
   width 250px
   border-right 1px solid #CCC
 .sidebar__list
+  h1
+    font-size 1.125rem
+    font-weight bold
+    border-bottom 1px solid #999
   h2
+    font-size 1.125rem
     margin-bottom .5rem
+    border-bottom 1px solid #E7E7E7
+    font-weight regular
+    a
+      color #1692b2
+  h3
+    font-size 0.875rem
+    text-transform uppercase
+    a
+      color #003351
   ul
     list-style none
     // Reduced to help tutorials sidebar page
     margin 0 0 1rem
     padding 0 0 0 1rem
     a
-      color #003252
+      color #1692b2
 .video-wrapper
   position relative
   padding-bottom 56.25%

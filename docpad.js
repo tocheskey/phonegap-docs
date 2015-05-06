@@ -1,4 +1,5 @@
 var path = require('path');
+var _ = require('lodash');
 
 module.exports = {
   "srcPath": ".",
@@ -65,6 +66,37 @@ module.exports = {
         .on('add', function(model) {
           model.setMetaDefaults({ 'layout': 'default' });
         });
+    }
+  },
+  templateData: {
+    parseNavItems: function() {
+      var collection = this.getCollection("navItems").toJSON();
+      var output = {};
+
+      var getObjectAsString = function(array,post) {
+        if(!array.length){
+          var endNode = {
+            title: post.title,
+            url: post.url
+          };
+          return JSON.stringify(endNode);
+        } else {
+          return '{"' + array[0] + '":' + getObjectAsString (array.slice(1),post) + '}';
+        }
+      }
+
+      for (var i = 0; i < collection.length; i++){
+        var pathAr = collection[i].relativePath.split('/');
+        var pathObj = JSON.parse(getObjectAsString(pathAr, collection[i]));
+        _.merge(output,pathObj);
+        for (var j = 0; j < pathAr.length; j++){
+
+        }
+
+      }
+
+
+      return output;
     }
   }
 };
