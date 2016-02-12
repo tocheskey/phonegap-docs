@@ -82,6 +82,7 @@ expand: dev-app
   - The network firewall is blocking the downloading of zip files
   - The network firewall is blocking the port
   - The mobile app has an internal JavaScript error
+  - The mobile app is not firing `deviceready`
 
   First, you should verify that your machine and device are on the same network.
 
@@ -179,4 +180,12 @@ expand: dev-app
       // alert or console.log a message
       alert(fileName, 'Line:', lineNumber, 'Error:', e.message);
     };
+  ```
+
+  Another helpful tip is to make sure `deviceready` is firing on your device. If this event is not firing, then your app will not receive updates or work in general. A quick way to determine if `deviceready` is firing is to simply subscribe to the event and call an `alert`. If no alerts appear, then there is definitely something causing an error in your JavaScript application.  
+
+  ```
+    document.addEventListener("deviceready", function(){
+        alert('Is this working?');
+    });
   ```
