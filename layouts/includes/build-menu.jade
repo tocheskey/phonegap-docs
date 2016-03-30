@@ -20,10 +20,15 @@ aside.sidebar
             li: a(href="/references/developer-app" class=document.url === 'references/developer-app' ? "current" : "") PhoneGap Developer
             li: a(href="/references/phonegap-cli" class=document.url === 'references/phonegap-cli' ? "current" : "") PhoneGap CLI
             li: a(href="/references/phonegap-build" class=document.url === 'references/phonegap-build' ? "current" : "") PhoneGap Build
-               - var subPages = [{title:"What is Build?", url:"references/phonegap-build/what-is-build"}]
-               ul
-                  each page in subPages
-                     li: a(href="/#{page.url}" class=document.url === page.url ? "current" : "")!=page.title
+            ul
+               li: a(href="/references/phonegap-build/getting-started" class=document.url === 'references/phonegap-build/getting-started' ? "current" : "") Getting Started
+               li: a(href="/references/phonegap-build/configuring" class=document.url === 'references/phonegap-build/configuring' ? "current" : "") Configuring
+               li: a(href="/references/phonegap-build/signing" class=document.url === 'references/phonegap-build/signing' ? "current" : "") Signing
+               li: a(href="/references/phonegap-build/debugging" class=document.url === 'references/phonegap-build/debugging' ? "current" : "") Debugging
+               li: a(href="/references/phonegap-build/developer-api" class=document.url === 'references/phonegap-build/developer-api' ? "current" : "") Developer Web Service API
+               li: a(href="/references/phonegap-build/support" class=document.url === 'references/phonegap-build/support' ? "current" : "") Support
+
+               
 
 
 

@@ -1,41 +1,26 @@
 ---
-title: PhoneGap Build Documentation
+title: PhoneGap Build
 url: references/phonegap-build
 layout: subpage
 expand: build
 ---
 
-### Overview
+Adobe PhoneGap provides a way for users to create mobile applications using technologies such as HTML, CSS, and Javascript. Applications created with PhoneGap can be distributed to various vendor app stores (ex: Apple App Store) and installed on a end-user's device like any other native application. Each vendor provides a different toolchain, and each PhoneGap release is compatible with a specific set of tools.bThis is where PhoneGap Build comes into help.
 
-The PhoneGap CLI provides a command line interface for creating PhoneGap apps as an alternative to using the
-[PhoneGap Desktop](/references/desktop-app) application. The PhoneGap CLI was the main tool used for creating PhoneGap 
-apps prior to PhoneGap Desktop and contains additional features over the PhoneGap Desktop for building, running 
-and packaging PhoneGap applications for multiple platforms. The use cases for the PhoneGap CLI will vary depending on the
- user and level they want to use it: 
+PhoneGap Build is a cloud service for compiling PhoneGap applications. Here are some of the benifits PhoneGap Build provides:
 
-1. Paired with the PhoneGap Developer App
-2. Paired with PhoneGap Build
-3. Standalone
+## Managed Compilation and Signing
 
-More details about these use cases can be found in the [Installation guide]((/references/phonegap-cli/install). 
-    
-### Supported Platforms
-The PhoneGap CLI is supported on Mac and Windows.  
+Local development involves installing and maintaining multiple native SDKs as well as the Cordova/PhoneGap SDK. PhoneGap Build takes this headache away! Get app-store ready apps without the headache of maintaining native SDKs. PhoneGap Build  will always be build against the required SDK for the platform you are targeting.
 
-### Guide Sections
-The sections covered in this reference include:
+## Multiple Supported Platforms
 
-- [Installing the CLI](/references/phonegap-cli/install)
-- [Help Options](/references/phonegap-cli/help)
-- [Creating an app](/references/phonegap-cli/create)
-- [Use with PhoneGap Build](/references/phonegap-cli/remote-usage)
-- [Serving an App](/references/phonegap-cli/serve)
-- [Using Templates](/references/phonegap-cli/templates)
-- [Cordova-specific Commands](/references/phonegap-cli/cordova)
-- [Updating CLI Version](/references/phonegap-cli/update)
+Target iOS, Android, Windows (Phone) all with a single codebase. As a web-service, PhoneGap Build may be used from any OS. 
 
-<div class="alert--info">**NOTE:** The PhoneGap CLI is built as a layer on top of the Apache Cordova CLI, so any command that can be used in Cordova
-is also supported by the PhoneGap CLI. This guide will detail the *additional* features that distinguish the PhoneGap 
- CLI from the Cordova CLI and should be used along with the [Cordova CLI Reference](http://cordova.apache.org/docs/en/edge/index.html).
-  For more details on the difference between PhoneGap and Apache Cordova, check out [this page](/getting-started/5-going-further).</div>
+## Work With Your Team
 
+Work collaboratively by adding team members and create roles within your PhoneGap Build projects.
+
+## Quicker Development Cycle
+
+Use Hydration to get faster debug and build cycles. With Hydration, updates to your application be pushed directly to your testers' previously installed apps, ensuring everyone is working on the most up-to-date version.
