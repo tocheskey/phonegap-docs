@@ -2,7 +2,7 @@
 title: Write API
 url: references/phonegap-build/developer-api/write
 layout: subpage
-expand: build
+expand: build-developer
 ---
 
 Back to:

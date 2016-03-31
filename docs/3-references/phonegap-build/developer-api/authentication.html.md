@@ -2,7 +2,7 @@
 title: API Authentication
 url: references/phonegap-build/developer-api/authentication
 layout: subpage
-expand: build
+expand: build-developer
 ---
 
 Version 1 supports two forms of authentication: basic authentication over HTTPS, and token authentication.

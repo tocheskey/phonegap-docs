@@ -2,7 +2,7 @@
 title: Read API
 url: references/phonegap-build/developer-api/read
 layout: subpage
-expand: build
+expand: build-developer
 ---
 
 Back to:

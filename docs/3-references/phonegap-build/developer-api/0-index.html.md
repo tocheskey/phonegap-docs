@@ -1,12 +1,10 @@
 ---
-title: Developer API
+title: PhoneGap Build Developer API
 url: references/phonegap-build/developer-api
 layout: subpage
-expand: build
+expand: build-developer
 ---
 
-
-# PhoneGap Build Developer API
 
 The PhoneGap Build API allows applications to use the PhoneGap Build web service to create, build, update, and download PhoneGap apps. It integrates easily into IDEs, shell scripts, app builders, and elsewhere.
 

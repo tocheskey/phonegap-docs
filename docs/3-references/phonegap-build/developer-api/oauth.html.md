@@ -2,7 +2,7 @@
 title: OAuth
 url: references/phonegap-build/developer-api/oauth
 layout: subpage
-expand: build
+expand: build-developer
 ---
 
 The Oauth authorization protocol allows third party applications access user information from PhoneGap Build without ever seeing the user's login information. Client Applications are pre-registered with PhoneGap Build, and users can view and manage which applications are interacting with PhoneGap Build on their behalf.
