@@ -25,7 +25,34 @@ By default, preferences are for all platforms. To specify a preference to be for
 
 This fragment will make the iOS app be available in landscape orientation while the android app will be in portrait mode.
 
-## Multi-Platform
+### Multi-Platform
+
+- [phonegap-version](#phonegap-version)
+- [orientation](#orientation)
+- [fullscreen](#fullscreen)
+
+### iOS Only
+- [target-device](#target-device)
+- [prerendered-icon](#prerendered-icon)
+- [detect-data-types](#detect-data-types)
+- [exit-on-suspend](#exit-on-suspend)
+- [deployment-target](#deployment-target)
+
+### Android Only
+- [android-build-tool](#android-build-tool)
+- [android-minSdkVersion](#android-minSdkVersion)
+- [android-maxSdkVersion](#android-maxSdkVersion)
+- [android-targetSdkVersion](#android-targetSdkVersion)
+- [android-installLocation](#android-installLocation)
+- [android-windowSoftInputMode](#android-windowSoftInputMode)
+
+
+<div class='alert--warning' id="phonegap-version">**phonegap-version**: The version of PhoneGap / Cordova used. As of version `cli-5.1.1` PhoneGap Build releases versions generally in conjuction with the PhoneGap CLI Project. Supported: `cli-5.1.1`, `cli-5.2.0`, `cli-6.0.0`.</div>
+
+<div class='alert--warning' id="phonegap-version">**orientation**: Device orientation; possible values are <code>default, landscape, or portrait</code>. Please note that <code>default</code> means <b>both</b> landscape and portrait are enabled. If you want to use each platform's default settings (usually portrait only), remove this tag from your config.xml file.</div>
+
+
+
 
 <table class="table">
 

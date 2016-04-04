@@ -5,7 +5,10 @@ layout: subpage
 expand: build-configuring
 ---
 
-## Specifying platform
+- [Icons](#icons)
+- [Splash Screens](#splashes)
+
+### Specifying platform
 
 Icons and splashes are usually platform specific.  There are two ways to specify an icon or splash is for a particular platform.  The first way is by specifying a `platform` attribute:
 
@@ -19,41 +22,25 @@ The second way (recommended) is by putting the icon or splash inside a platform 
 
 Both these fragments will result in the icon being used for iOS.
 
-<a name="splashes"></a>
-## Icons
+<a name="icons"></a>
+# Icons
 
-Unless otherwise specified in a config.xml, each platform will try to use the default `icon.png` during compilation. To define platform specific icons please use the guide provided below.
-
-Icon files should be the file formats specified in the examples below, other file types are not guaranteed to work across platforms.
-
-<table class="table">
-  <tr>
-    <td><code>&lt;icon&gt;</code></td>
-    <td>
-      <p>
-        You can have zero or more of these elements present in your
-        <code>config.xml</code>. If you do not specify a icon then the PhoneGap logo will
-        be used as your application's icon.
-      </p>
-      <p>
-        <code>src</code>: (required) specifies the location of the image file, relative
-        to your <code>www</code> directory
-      </p>
-      <p>
-        <code>width</code>: (optional) but recommended to include, width in pixels
-      </p>
-      <p>
-        <code>height</code>: (optional) but recommended to include, height in pixels
-      </p>
-    </td>
-  </tr>
-</table>
-
-### Default
-
-The default icon must be named `icon.png` and must reside in the root of your application folder.
+The simplest icon configuration is a single default `icon.png`:
 
     <icon src="icon.png" />
+
+The default icon must be named `icon.png` and must reside in the root of your application folder. If no other icon configurations are specified, each platform will attempt to use this file as the default icon. To define platform specific icons please use the guide provided below. Icon files should be the file formats specified in the examples below, other file types are not guaranteed to work across platforms.
+
+    <icon src="res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180" />
+
+**src**: (required) specifies the location of the image file, relative to your `www` directory
+
+**width**: (optional) but recommended to include, width in pixels
+
+**height**: (optional) but recommended to include, height in pixels
+
+**platform**: (optional) the target platform (`ios`, `android`, or `windows`)
+
 
 ### iOS
 
@@ -135,7 +122,7 @@ As of PhoneGap Release cli-6.0.0, the Windows Phone 8.1 package is built using c
     <icon platform="winphone" width="744" height="360" src="res/Wide310x150Logo.scale-240.png" />
 
 <a name="splashes"></a>
-## Splash Screens
+# Splash Screens
 
 You can have zero or more of these elements present in your `config.xml`. This element can have `src`, `platform`, `width` and `height` attributes, just like the `<icon>` element above. Like icon files, your splash screens should be saved as `png` files.
 
