@@ -18,6 +18,8 @@ Please note that example responses are formatted for the sake of
 legibility. Actual JSON responses will have no significant whitespace.
 
 The API's read interface includes the following:
+<code>GET /api/v1/me</code> [Get A User's Profile and Resources](#_get_https_build_phonegap_com_api_v1_me)
+<code>GET /api/vw/apps</code> [Get A User's Apps](#_get_https_build_phonegap_com_api_v1_apps)
 
 <table class="table">
 <tr>

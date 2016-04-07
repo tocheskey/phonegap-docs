@@ -5,18 +5,18 @@ layout: subpage
 expand: build-configuring
 ---
 
-<a style="display:none" name="_access_elements">Access Elements</span><!-- so that old links work -->
-# Whitelisting
-
-#### As of Cordova iOS 4.x, Cordova Android 4.x, and Cordova Windows 4.x, whitelist management was moved from the core Cordova project to the `cordova-whitelist-plugin`, including the addition of the `allow-navigation` and `allow-intent` elements. You must add this plugin to enable and restrict network access in your application. 
+<div class='alert--warning' style="font-style:bold">
+As of Cordova iOS 4.x, Cordova Android 4.x, and Cordova Windows 4.x, whitelist management was moved from the core Cordova project to the `cordova-whitelist-plugin`, including the addition of the `allow-navigation` and `allow-intent` elements. You must add this plugin to enable and restrict network access in your application. 
 
     <plugin name="cordova-plugin-whitelist" />
 
-#### [See the cordova-whitelist-plugin repository for up to date documentation](https://github.com/apache/cordova-plugin-whitelist). The following documentation here is for pre-4.0 applications only.
+[See the cordova-whitelist-plugin repository for up to date documentation](https://github.com/apache/cordova-plugin-whitelist). The following documentation here is for pre-4.0 applications only.
+</div>
+
 
 ---
 
-## Whitelist Pre Cordova 4.x
+### Whitelist (Pre Cordova 4.x)
 
 The access element provides your app with access to resources on other domains - in particular, it allows your app to load pages from external domains that can take over your entire webview.
 

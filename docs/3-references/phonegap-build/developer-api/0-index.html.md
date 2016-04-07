@@ -16,7 +16,11 @@ The core sections discussed in this documentation article are:
 
 Here are some additional notes on using the API.
 
-## JSON
+- [JSON](#JSON)
+- [JSONP](#JSONP)
+- [HATEOAS](#HATEOAS)
+
+### JSON
 
 All successful requests return either a JSON-encoded string or a binary file. All requests that fail return a JSON-encoded string in the following form, with an appropriate status code:
 
@@ -33,7 +37,7 @@ As is standard in HTTP, a _4xx_ status indicates an error with the request, whil
   <a href="http://community.phonegap.com" target="_blank">PhoneGap's support forums</a>
 if you get a 500 error, or an unexpected 400 error.
 
-## JSONP
+### JSONP
 
 JSONP access is available for PhoneGap Build developers: just add a `callback` parameter to your requests, and the JSONP response body is wrapped in that function:
 
@@ -45,7 +49,7 @@ JSONP access is available for PhoneGap Build developers: just add a `callback` p
 
 This allows you to access the PhoneGap Build API using `<script>` tags.
 
-## HATEOAS
+### HATEOAS
 
 Wherever possible, the PhoneGap Build API v1 uses _Hypermedia as the Engine of Application State_ (
   <a href="http://en.wikipedia.org/wiki/HATEOAS" target="_blank">HATEOAS</a>
