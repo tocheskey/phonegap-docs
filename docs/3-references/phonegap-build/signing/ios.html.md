@@ -28,10 +28,10 @@ Next you'll export it to the P12 keystore format. To do this on Mac® OS:
 3. Select the Keys category in Keychain Access.
 4. Select the private key associated with your iPhone Development Certificate. The private key is identified by the iPhone Developer: <First Name> <Last Name> public certificate that is paired with it.
 5. Command-click the iPhone Developer certificate and select, Export "iPhone Developer: Name...".
-![Keychain export](https://build.phonegap.com/images/_docs/ios-builds/keychain-export.png)
+![Keychain export](/images/phonegap-build/keychain-export.png)
 6. Save your keystore in the Personal Information Exchange (.p12) file format.
 7. You will be prompted to create a password that is used when you use the keystore to sign applications or transfer the key and certificate in this keystore to another keystore.
-![keychain password](https://build.phonegap.com/images/_docs/ios-builds/keychain-password.png)
+![keychain password](/images/phonegap-build/keychain-password.png)
 
 ***
 
@@ -70,18 +70,18 @@ To develop apps via Build, you must use a P12 certificate file. You generate thi
 
 Go to your Account > Edit Setting > Signing Keys' tab:
 
-![Edit Account](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
+![Edit Account](/images/phonegap-build/edit_account_settings.png)
 
 Click 'add a key...' and supply your previously generated p12:
 
-![Add Key](https://lh3.googleusercontent.com/-0Va4o9-6Bvs/UaS4oBZyrcI/AAAAAAAAAIU/9D3jQxFUYfw/s800/iOS%2520add%2520key.png)
+![Add Key](/images/phonegap-build/ios_add_key.png)
     
 ### <a id="unlock"> </a>Unlocking the key.
 
 Go to your Account > Edit Setting > Signing Keys' tab: 
 
-![Edit Account](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
+![Edit Account](/images/phonegap-build/edit_account_settings.png)
 
 Click 'lock' button and supply the certificate password you used to export your cert.
 
-![Unlock key](https://lh4.googleusercontent.com/-webq3UkyIQI/UbXzhTNFb_I/AAAAAAAAAIw/rQR_7mi-F7s/s800/iOS%2520unlock.png)
+![Unlock key](/images/phonegap-build/ios_unlock.png)
