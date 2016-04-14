@@ -28,7 +28,7 @@ For maximum sizes of zip uploads, see the <a href="https://build.phonegap.com/pl
 <a id="configure_application"></a>
 ### 2. How Do I Configure My Application?
 
-You'll need an application configuration file, or `config.xml`, in your app package to configure how your app is built. This includes PhoneGap version, icons and splash screens, platforms, and much more. See the [configuration section](../configuring/) for more on the config.xml file.
+You'll need an application configuration file, or `config.xml`, in your app package to configure how your app is built. This includes PhoneGap version, icons and splash screens, platforms, and much more. [See this page for a breakdown of PhoneGap versions supported by PhoneGap Build](https://build.phonegap.com/current-support). See the [configuration section](../configuring/) for more on the config.xml file.
 
 <a id="structure_application"></a>
 ### 3. How Do I Structure My Application?

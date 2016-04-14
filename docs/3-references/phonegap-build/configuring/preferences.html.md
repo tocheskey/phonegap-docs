@@ -39,7 +39,7 @@ If you want to see more detail about what exactly these custom preferences are d
 
 
 ### Multi-Platform
-<div class='alert--warning' id="phonegap-version">**phonegap-version**: The version of PhoneGap / Cordova used. As of version `cli-5.1.1` PhoneGap Build releases versions generally in conjuction with the PhoneGap CLI Project. Supported: `cli-5.1.1`, `cli-5.2.0`, `cli-6.0.0`.
+<div class='alert--warning' id="phonegap-version">**phonegap-version**: The version of PhoneGap / Cordova used. For a list of currently supported PhoneGap versions, and a breakdown of the individual platform versions, [go here](https://build.phonegap.com/current-support).
 </div>
 
 <div class='alert--warning' id="orientation">**orientation**: Device orientation; possible values are <code>default, landscape, or portrait</code>. Please note that <code>default</code> means <b>both</b> landscape and portrait are enabled. If you want to use each platform's default settings (usually portrait only), remove this tag from your config.xml file.</div>
