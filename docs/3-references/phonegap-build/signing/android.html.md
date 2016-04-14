@@ -5,13 +5,15 @@ layout: subpage
 expand: build-signing
 ---
 
-[Generating a private key](#_generating_a_private_key)
-[Submitting your key to build](#_submitting_your_key_to_build)
-[Unlocking your key](#_unlocking_your_key)
+- [Generating a private key](#generating-a-private-key)
+- [Submitting your key to build](#submitting-your-key-to-build)
+- [Unlocking your key](#unlocking-your-key)
 
-**Note: it is Phonegap Build's policy not to retrieve signing keys for users, for legal reasons. Hold on to them.**
+**Note: it is Phonegap Build's policy not to retrieve signing keys for users, for legal reasons. Back them up.**
 
-## Generating a private key
+***
+
+### Generating a private key
 
 1. [Download and install Java](http://www.java.com/en/download/index.jsp).
 
@@ -31,7 +33,7 @@ expand: build-signing
 7. Your signing key is now ready to submit:
 ![Submit signing key](https://lh3.googleusercontent.com/-HITXvrjJ_Ts/UQoefEAAnfI/AAAAAAAAADM/4uurmV0t1eM/s800/keystore_ready.png)
 
-## Submitting your key to Build
+### Submitting your key to Build
 
 Go to your Account > Edit Setting > Signing Key's tab. 
 ![Edit signing keys](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
@@ -39,12 +41,13 @@ Go to your Account > Edit Setting > Signing Key's tab.
 Click 'add a key...', ensuring you use the same alias used when you generated your key.
 ![Add info](https://lh5.googleusercontent.com/-SlgtUAUu0yg/UQojGv88wyI/AAAAAAAAADs/feiaimA9TDA/s800/add_key.png)
 
-## Unlocking your key
+### Unlocking your key
 
 Go to your Account > Edit Setting > Signing Key's tab: 
 ![Signing Keys](https://lh4.googleusercontent.com/-8yYhqgfxFd8/UQogUPNxBaI/AAAAAAAAADc/kS6zVSBT30U/s800/edit_account_settings.png)
 
 Click unlock button and supply the the certificate password (from step #6 above) and the keystore password (from step #4 above)
+
 ![Unlocking](https://lh5.googleusercontent.com/-_0NDzwogI34/UQonEx9z8jI/AAAAAAAAAD8/S3AfFDrQHyA/s800/unlock_key.png)
 
 Lastly, either set your key to be default using the checkbox in the keys list, or in your individual application's details, select the key you've uploaded and unlocked.

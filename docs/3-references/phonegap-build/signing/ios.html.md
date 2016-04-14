@@ -5,18 +5,23 @@ layout: subpage
 expand: build-signing
 ---
 
-[Mac Users](#_mac_users)
-[Windows Users](#_windows_users)
+- [Creating your key on Mac](#mac-users)
+- [Creating your key on Windows](#windows-users)
+- [Register Devices](#register-devices)
+- [Create Provisioning Profile](#create-provisioning-profile)
+- [Submit to Build](#submit-to-build)
 
-**Note: it is Phonegap Build's policy not to retrieve signing keys for users, for legal reasons. Hold on to them.**
+**Note: it is Phonegap Build's policy not to retrieve signing keys for users, for legal reasons. Back them up.**
 
 ***
 
-## Mac Users
+### Mac Users
 
-### Convert the iPhone developer certificate to a P12 file on Mac OS
+#### Convert the iPhone Developer Certificate to a P12 file on Mac OS
 
-Once you have downloaded the Apple iPhone certificate from Apple, export it to the P12 keystore format. To do this on Mac® OS:
+You'll first need to obtain an Apple Developer Certificate. See apple documenation for this. 
+
+Next you'll export it to the P12 keystore format. To do this on Mac® OS:
 
 1. Open the Keychain Access application (in the Applications/Utilities folder).
 2. If you have not already added the certificate to Keychain, select File > Import. Then navigate to the certificate file (the .cer file) you obtained from Apple.
@@ -30,9 +35,9 @@ Once you have downloaded the Apple iPhone certificate from Apple, export it to t
 
 ***
 
-## Windows Users
+### Windows Users
 
-### Convert an Apple developer certificate to a P12 file on Windows
+#### Convert an Apple developer certificate to a P12 file on Windows
 
 To develop apps via Build, you must use a P12 certificate file. You generate this certificate based on the Apple iPhone developer certificate file you receive from Apple.
 
@@ -50,16 +55,18 @@ To develop apps via Build, you must use a P12 certificate file. You generate thi
 
 `openssl pkcs12 -export -inkey mykey.key -in developer_identity.pem -out iphone_dev.p12`
 
-## Register devices
+### Register devices
+
 1. Visit [Apple Developer Portal](https://developer.apple.com/ios/manage/provisioningprofiles/index.action).
 2. Go to Device section. Under Manage tab, provide Device Name and [Device ID](https://developer.apple.com/ios/manage/devices/howto.action) (40 hex characters)
 
-## Create Provisioning Profile
+### Create Provisioning Profile
+
 1. Visit [Apple Developer Portal](https://developer.apple.com/ios/manage/provisioningprofiles/index.action).
 2. Go to Provisioning section. Create new profile under Development tab.
 3. Fill the form with Profile Name, Certificates (as per .cer above), App ID and your development device. 
 
-## Submit to Build
+### Submit to Build
 
 Go to your Account > Edit Setting > Signing Keys' tab:
 
@@ -69,7 +76,7 @@ Click 'add a key...' and supply your previously generated p12:
 
 ![Add Key](https://lh3.googleusercontent.com/-0Va4o9-6Bvs/UaS4oBZyrcI/AAAAAAAAAIU/9D3jQxFUYfw/s800/iOS%2520add%2520key.png)
     
-## <a id="unlock"> </a>Unlocking the key.
+### <a id="unlock"> </a>Unlocking the key.
 
 Go to your Account > Edit Setting > Signing Keys' tab: 
 

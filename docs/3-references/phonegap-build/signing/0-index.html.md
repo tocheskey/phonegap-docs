@@ -5,6 +5,8 @@ layout: subpage
 expand: build-signing
 ---
 
-[iOS Signing](ios)
+In order to distribute your application to the App Stores, you'll need to sign them. This documentation will outline how to prepare your application for app store distribution.
 
-[Android Signing](android)
+- [iOS Signing](ios)
+- [Android Signing](android)
+- [Windows Phone Signing](windows)

@@ -7,8 +7,8 @@ expand: build-developer
 
 Back to:
 
-* [Authentication Methods](authentication)
-* [The Write API](write)
+* [Authentication Methods](../authentication)
+* [The Write API](../write)
 
 This section details read methods for version 1 of the API. See The
 PhoneGap Build API for an overview, or The PhoneGap Build Write API
@@ -18,63 +18,66 @@ Please note that example responses are formatted for the sake of
 legibility. Actual JSON responses will have no significant whitespace.
 
 The API's read interface includes the following:
-<code>GET /api/v1/me</code> [Get A User's Profile and Resources](#_get_https_build_phonegap_com_api_v1_me)
-<code>GET /api/vw/apps</code> [Get A User's Apps](#_get_https_build_phonegap_com_api_v1_apps)
 
-<table class="table">
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_me"><code>/api/v1/me</code> Get A User's Profile and Resources</a>
-  </td>
-</tr>
-<tr>
-</tr>
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_apps"><code>/api/v1/apps</code> Get A User's Apps</a>
-  </td>
-</tr>
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_apps_id"><code>/api/v1/apps/:id</code> Get A User's App by Id</a>
-  </td>
-</tr>
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_apps_id_icon"><code>/api/v1/apps/:id/icon</code> Get A User's App's main Icon</a>
-  </td>
-</tr>
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_apps_id_platform"><code>/api/v1/apps/:id/:platform</code> Download A User's App by Platform</a>
-  </td>
-</tr>
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_keys"><code>api/v1/keys</code> Get Meta-data About A User's Keys</a>
-  </td>
-</tr>
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_keys_platform"><code>/api/v1/keys/:platform</code> Get Meta-Data About A User's Platfom Keys</a>
-  </td>
-</tr>
-<tr>
-  <td><span class="label label-success">GET</span></td>
-  <td>
-    <a href="#_get_https_build_phonegap_com_api_v1_keys_platform_id"><code>/api/v1/keys/:platform/:id</code>Get Meta-Data About A Specific Key</a>
-  </td>
-</tr>
-</table>
+<style>
+.api span {
+    background-color: #5cb85c;
+}
+.api span {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    margin-right: 10px;
+}
 
-## GET https://build.phonegap.com/api/v1/me
+.api code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #333;
+    white-space: nowrap;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.api {
+    padding: 5px;
+    border-radius: 5px;
+    background-color:#f1f1f1;
+    width: 100%;
+    display:block;
+}
+
+.api:hover {
+    background-color:#e0e0e0;
+    text-decoration: none;
+}
+</style>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_me"><span class="label label-success">GET</span><code>/api/v1/me</code> Get A User's Profile and Resources</a>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_apps"><span class="label label-success">GET</span><code>/api/v1/me</code> Get A User's Apps</a>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_apps_id"><span class="label label-success">GET</span><code>/api/v1/apps/:id</code> Get A User's App by Id</a>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_apps_id_icon"><span class="label label-success">GET</span><code>/api/v1/apps/:id/icon</code> Get A User's App's main Icon</a>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_apps_id_platform"><span class="label label-success">GET</span><code>/api/v1/apps/:id/:platform</code> Download A User's App by Platform</a>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_keys"><span class="label label-success">GET</span><code>/api/v1/keys</code> Get Meta-data About A User's Keys</a>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_keys_platform"><span class="label label-success">GET</span><code>/api/v1/keys/:platform</code> Get Meta-Data About A User's Platfom Keys</a>
+
+<a class="api" href="#_get_https_build_phonegap_com_api_v1_keys_platform_id"><span class="label label-success">GET</span><code>/api/v1/keys/:platform/:id</code> Get Meta-Data About A Specific Key</a>
+
+<span id="_get_https_build_phonegap_com_api_v1_me"></span>
+### `GET https://build.phonegap.com/api/v1/me`
 
 Get a JSON-encoded representation of the authenticated user, as well
 as a listing of associated resources.
@@ -145,7 +148,8 @@ PhoneGap Build API. It is aliased to
         }
 
 
-## GET https://build.phonegap.com/api/v1/apps
+<span id="_get_https_build_phonegap_com_api_v1_apps"></span>
+### `GET https://build.phonegap.com/api/v1/apps`
 
 Get a JSON-encoded representation of the authenticated user's apps.
 
@@ -220,7 +224,8 @@ collaborators:
         }
 
 
-## GET https://build.phonegap.com/api/v1/apps/:id
+<span id="_get_https_build_phonegap_com_api_v1_apps_id"></span>
+### `GET https://build.phonegap.com/api/v1/apps/:id`
 
 Get a JSON-encoded representation of a particular app, if the
 authenticated user has permission to access it.
@@ -303,7 +308,8 @@ message returns with status code `404`:
             "error":"app #54 not available"
         }
 
-## GET https://build.phonegap.com/api/v1/apps/:id/icon
+<span id="_get_https_build_phonegap_com_api_v1_apps_id_icon"></span>
+### `GET https://build.phonegap.com/api/v1/apps/:id/icon`
 
 Get the main icon associated with an app, either the biggest icon
 specified in your `config.xml` file, or an icon you have uploaded
@@ -331,7 +337,8 @@ If no icon ais vailable, an error message returns with status code
             "error":"No icon available for app #52"
         }
 
-## GET https://build.phonegap.com/api/v1/apps/:id/:platform
+<span id="_get_https_build_phonegap_com_api_v1_apps_id_platform"></span>
+### `GET https://build.phonegap.com/api/v1/apps/:id/:platform`
 
 Download the app package for the given platform. Available platforms
 are `android`, `ios`, and `winphone`.
@@ -364,7 +371,8 @@ message returns with status code `404`:
             "error":"app #52 download unavailable for android"
         }
 
-## GET https://build.phonegap.com/api/v1/keys
+<span id="_get_https_build_phonegap_com_api_v1_keys"></span>
+### `GET https://build.phonegap.com/api/v1/keys`
 
 Get a JSON-encoded list of all the signing keys associated with your
 account.
@@ -418,7 +426,8 @@ to the list you see when requesting `/api/v1/me`:
             "link":"/api/v1/keys"
         }
 
-## GET https://build.phonegap.com/api/v1/keys/:platform
+<span id="_get_https_build_phonegap_com_api_v1_keys_platform"></span>
+### `GET https://build.phonegap.com/api/v1/keys/:platform`
 
 Get a JSON-encoded list of all the signing keys associated with your
 account, for a specific platform. That platform can be either `ios` or
@@ -469,7 +478,8 @@ account, for a specific platform. That platform can be either `ios` or
             "link":"/api/v1/keys/winphone"
         }
 
-## GET https://build.phonegap.com/api/v1/keys/:platform/:id
+<span id="_get_https_build_phonegap_com_api_v1_keys_platform_id"></span>
+### `GET https://build.phonegap.com/api/v1/keys/:platform/:id`
 
 Get a JSON-encoded representation of a single signing key:
 
