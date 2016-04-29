@@ -39,6 +39,12 @@ Next you'll export it to the P12 keystore format. To do this on Mac® OS:
 
 #### Convert an Apple developer certificate to a P12 file on Windows
 
+Generate a certificate signing request:
+
+`openssl req -nodes -newkey rsa:2048 -keyout private_key.key -out cer_sign_request.csr`
+
+Upload that csr file to the Apple Developer Center and it will spit out a certificate (.cer).
+
 To develop apps via Build, you must use a P12 certificate file. You generate this certificate based on the Apple iPhone developer certificate file you receive from Apple.
 
 1. Download and install [OpenSSL](http://slproweb.com/products/Win32OpenSSL.html)

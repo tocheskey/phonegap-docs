@@ -33,6 +33,10 @@ If you want to see more detail about what exactly these custom preferences are d
 - [android-installLocation](#android-installLocation)
 - [android-windowSoftInputMode](#android-windowSoftInputMode)
 
+### Windows Only (cli-6.1.1 and above)
+- [windows-arch](#windows-arch)
+- [windows-identity-name](#windows-identity-name)
+
 ### Examples
 - [Full sample config.xml](#example)
 - [Platform selection](#platform-selection)
@@ -76,6 +80,11 @@ Corresponds to the <code>usesSdk</code> attributes in the <code>AndroidManifest.
 <div class='alert--warning' id="android-installLocation">**android-installLocation**: Where an app can be installed - defaults to <code>internalOnly</code> (as the Android SDK). <code>auto</code> or <code>preferExternal</code> allow the app to be installed on an SD card - this can lead to unexpected behavior. More details available in [the Android documentation](http://developer.android.com/guide/appendix/install-location.html).</div>
 
 <div class='alert--warning' id="android-windowSoftInputMode">**android-windowSoftInputMode**: How the main window of the activity interacts with the window containing the on-screen soft keyboard. More details, and possible values, available in [the Android documentation](http://developer.android.com/guide/topics/manifest/activity-element.html#wsoft).</div>
+
+### Windows Only
+<div class='alert--warning' id="windows-arch">**windows-arch**: Select the architecture that your build targets. Valid values are `anycpu`, `arm`, `x86`, and `x64`.</div>
+
+<div class='alert--warning' id="windows-identity-name">**windows-identity-name**: Set the App Idenity Name in your App Manifest, necessary for publishing to the App Store. This preference must match the App Identity Name from your *Windows Dev Center Account -> App Management -> App Identity*.</div>
 
 
 <a id="example"></a>
