@@ -1,6 +1,7 @@
 ---
 title: Using Augmented Reality with the Wikitude Cordova Plugin
 url: references/developer-app/wikitude
+github_url: https://github.com/phonegap/phonegap-docs/blob/wikitude/docs/3-references/developer-app/8-developing-with-wikitude.md
 layout: subpage
 expand: dev-app
 ---
